@@ -1,6 +1,6 @@
 module.exports = {
-    mode: "production",
-
+    mode: "development",
+    watch: true,
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
@@ -11,10 +11,17 @@ module.exports = {
 
     module: {
         rules: [
+            {   test: /\.scss$/, 
+                use: [ "style-loader", "css-loader", "sass-loader" ] 
+            },
             {
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
                 use: [
+                    { 
+                        loader: "babel-loader" 
+                    },
+
                     {
                         loader: "ts-loader"
                     }
@@ -38,3 +45,4 @@ module.exports = {
         "react-dom": "ReactDOM"
     }
 };
+
