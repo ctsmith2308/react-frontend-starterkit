@@ -1,5 +1,1 @@
-Notes:
-
-`adding react-router-dom`
-
-`npm i --save-dev install react-router-dom`
+WIP for getting a React, Redux, TypeScript, Sass, Babel, and Webpack project template.
